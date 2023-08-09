@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Login and Register Form</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="#">
+                <img src="Form" alt="Logo" width="100">
+            </a>
+    
+            <!-- Toggler button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar content to collapse -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link scroll-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#task">Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="sky.html" target="_blank">Starry sky</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Hello This Is Task №4</h1>
+                    <br>
+                    <p>Login and register form with specific animations<br> I hope you like it!</p>
+                    <br>
+                    <a class="btn btn-danger" href="#task">Click Me to Scroll Down!</a>
+                </div>
+                <i class="bi bi-mouse"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="task" class="task-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Have an account?</h2>
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 login-form">
+                                <form>
+                                    <div class="mb-3 form-group">
+                                        <label for="login-username" class="form-label"></label>
+                                        <input type="text" class="form-control" id="login-username" name="login-username" placeholder=" ">
+                                        <label for="login-username" class="form-label">Username</label>
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <input type="password" class="form-control" id="login-password" name="login-password" placeholder=" ">
+                                        <label for="login-password" class="form-label">Password</label>
+                                        <i class="bi bi-eye password-toggle-icon" id="password-toggle"></i>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" id="btn-login">SIGN IN</button>
+                                    <div class="mb-3 form-check">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" id="remember-me">
+                                                <label class="form-check-label" for="remember-me">Remember me</label>
+                                            </div>
+                                            <a href="#" class="ml-auto" id="register-text">Register</a>
+                                        </div>
+                                        <div class="text-center mt-2">— Sign in options —</div>
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button type="button" class="custom-button mx-2"><i class="bi bi-facebook"></i>Facebook</button>
+                                            <button type="button" class="custom-button ml-2"><i class="bi bi-google"></i>Google</button>
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3 register-form d-none form-hidden">
+                                <form>
+                                    <div class="mb-3 form-group">
+                                        <label for="register-username" class="form-label"></label>
+                                        <input type="text" class="form-control" id="register-username" name="register-username" placeholder=" ">
+                                        <label for="register-username" class="form-label">Username</label>
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label for="register-email" class="form-label"></label>
+                                        <input type="email" class="form-control" id="register-email" name="register-email" placeholder=" ">
+                                        <label for="register-email" class="form-label">Email</label>
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label for="register-phone" class="form-label"></label>
+                                        <input type="tel" class="form-control" id="register-phone" name="register-phone" placeholder=" ">
+                                        <label for="register-phone" class="form-label">Phone</label>
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label for="register-password" class="form-label"></label>
+                                        <input type="password" class="form-control" id="register-password" name="register-password" placeholder=" ">
+                                        <label for="register-password" class="form-label">Password</label>
+                                    </div>
+                                    <a href="#" class="ml-auto" id="login-text">Login</a>
+    
+                                    <button type="button" class="btn btn-primary" id="btn-register">REGISTER</button>
+                                    <div class="text-center mt-2">— Sign in options —</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <button type="button" class="custom-button mr-2">Facebook</button>
+                                        <button type="button" class="custom-button ml-2">Google</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="sky" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>This is task №4</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="success-popup">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <div class="success-message">
+                Successfully registered.
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to top button -->
+<button id="scrollToTopBtn" class="scroll-to-top-button">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+$(document).ready(function () {
+    // Register link click handler
+    $('#register-text').on('click', function (event) {
+        event.preventDefault();
+        $('.login-form, .register-form').addClass('form-hidden').removeClass('fade-in');
+        $('.login-form').addClass('fade-out');
+        $('.register-form').removeClass('form-hidden').removeClass('d-none').addClass('fade-in');
+        setTimeout(function () {
+            $('.login-form').addClass('form-hidden').removeClass('fade-out');
+        }, 500); // The duration of the fade-out animation in milliseconds
+    });
+
+    // Login link click handler
+    $('#login-text').on('click', function (event) {
+        event.preventDefault();
+        $('.login-form, .register-form').addClass('form-hidden').removeClass('fade-in');
+        $('.register-form').addClass('fade-out');
+        $('.login-form').removeClass('form-hidden').removeClass('d-none').addClass('fade-in');
+        setTimeout(function () {
+            $('.register-form').addClass('form-hidden').removeClass('fade-out');
+        }, 500); // The duration of the fade-out animation in milliseconds
+    });
+
+    // Register button click handler (for the popup)
+    $('#btn-register').on('click', function () {
+        $('#success-popup').fadeIn(500); // The duration of the fade-in animation in milliseconds
+        setTimeout(function () {
+            $('#success-popup').fadeOut(500); // The duration of the fade-out animation in milliseconds
+        }, 1000); // Time to display the success message in milliseconds
+    });
+});
+
+//show and hide password
+        $('#password-toggle').on('click', function () {
+    const passwordInput = $('#login-password');
+    const passwordToggle = $(this);
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        passwordToggle.removeClass('bi-eye').addClass('bi-eye-slash');
+    } else {
+        passwordInput.attr('type', 'password');
+        passwordToggle.removeClass('bi-eye-slash').addClass('bi-eye');
+    }
+});
+
+    // Scroll to top button behavior
+const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+    </script>
+</body>
+</html>
+

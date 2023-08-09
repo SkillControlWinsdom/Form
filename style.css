@@ -1,0 +1,377 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+a.nav-link{
+    color: white;
+}
+ .home-section {
+    height: 100%;
+    padding-top: 20%;
+    text-align: center;
+    background: #fff;
+    background-image: url(images/deletive_landing_page_with_beautiful_LOGIN_FORM_in_the_center__20916d76-3087-4e37-9628-3c88b97b3c08_upscaled-PhotoRoom-transformed.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-variant: small-caps;
+}
+
+.task-section {
+    padding-top: 150px;
+    text-align: center;
+    background: url(images/bg-modified.jpg) center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to control the darkness */
+}
+
+.task-section h2 {
+    font-size: 2rem;
+}
+
+.task-section .form-group {
+    margin-bottom: 1rem;
+}
+
+.task-section .btn-primary {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 40px;
+}
+
+.task-section .form-control {
+    width: 100%;
+    height: 50px;
+}
+
+
+.contact-section {
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    
+}
+
+.btn {
+   
+    width: 280px;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+    font-variant: small-caps;
+    
+}
+
+a.btn.btn-danger{
+
+    padding: 15px;
+}
+
+
+
+
+
+/* Animation Try */
+ 
+.login-form, .register-form {
+    position: relative;
+    transition: transform 1.1s ease, opacity 1.1s ease;
+    
+}
+
+.login-form.form-hidden,
+.register-form.form-hidden {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Fade in animation for forms */
+.fade-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+  
+
+body h2,h3 {
+    color: white;
+}
+
+form {
+    max-width: 450px; /* Change this value to adjust the maximum width of the form */
+    margin: 0 auto; /* This centers the form horizontally */
+  }
+  
+ /*
+  .btn-primary {
+    background-color: #fbceb4 !important;
+    color: #000308 !important;
+    width: 320px!important;
+    height: 50px!important;
+    font-size: 15px;
+    text-transform: uppercase!important;
+    border: 1px solid #fbceb5 !important;
+    border-radius: 40px!important;
+
+}
+*/
+
+.btn-primary {
+  background-color: #fbceb4 !important;
+  color: #000308 !important;
+  width: 320px!important;
+  height: 50px!important;
+  font-size: 15px;
+  text-transform: uppercase!important;
+  border: 1px solid #fbceb5 !important;
+  border-radius: 40px!important;
+  position: relative !important;
+  overflow: hidden !important;
+  
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  
+}
+
+.btn-primary:hover::before,
+.btn-primary:focus::before {
+  width: 320px;
+  height: 200px;
+  opacity: 1;
+ 
+  
+}
+
+.btn-primary:active::before {
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+  
+}
+
+
+.form-control {
+    width: 320px !important;
+    height: 50px !important;
+    color: white !important;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 80px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    -webkit-transition: 0.3s !important;
+    -o-transition: 0.3s !important;
+    transition: 0.3s !important;
+  }
+
+.text-center{
+    color: #fff;
+}
+
+.form-check-label[for="remember-me"] {
+    color: #fbceb4;
+}
+
+
+.custom-button {
+    width: 140px;
+    height: 46px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-button:hover {
+    background-color: black;
+    color: white;
+  }
+/*
+.gradient-custom {
+    background: rgb(18,24,63);
+    background: linear-gradient(90deg, rgba(18,24,63,1) 0%, rgba(59,55,141,1) 43%, rgba(93,79,193,1) 100%);
+}
+*/
+
+#login-form, #register-form {
+    position: relative;
+}
+
+/* Class to hide the form */
+.form-hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.success-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #4CAF50;
+    margin-right: 20px;
+}
+
+.success-message {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+/* floating lables */
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+}
+
+.password-toggle-icon:hover {
+  color: #fbceb4;
+}
+  .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus + .form-label,
+        .form-control:not(:placeholder-shown) + .form-label {
+            top: 0;
+            font-size: 12px;
+            color: #fbceb4;
+        }
+
+        /* wrong mail */
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: translateX(-10px);
+            }
+            20%, 40%, 60%, 80% {
+                transform: translateX(10px);
+            }
+        }
+        
+        /* Add red border for error */
+        .form-error {
+            border: 1px solid red !important;
+            animation: shake 0.5s ease-in-out;
+        }
+
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fbceb4;
+    color: #000308;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scroll-to-top-button:hover {
+    background-color: #000308;
+    color: #fbceb4;
+}
+
+
+
+.form-check .d-flex.icons {
+    justify-content: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+.custom-button i {
+    margin-right: 10px;
+}
+/* media query */

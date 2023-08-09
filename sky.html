@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Sky Animation</title>
+    <style>
+        body, html { 
+    background-image: url(images/moon1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; /* Add this line */
+    padding: 0; /* Add this line */
+    overflow: hidden; /* Add this line */
+}
+
+
+
+/* Create the star animation */
+
+.star{
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
+    animation:  animate 3s linear infinite;
+}
+.star::before{
+    content: '';
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-990px);
+        opacity: 0;
+
+    }
+    
+}
+.star:nth-child(1){
+    top: 0;
+    right: 0;
+    left:initial;
+    animation-delay:1 ;
+    animation-duration: 4s;
+    top: 20%;
+    left: 60%;
+}
+
+/* title */
+
+h1 {
+            position: absolute;
+            top: calc(50% - 40px); /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: #f3d2be; /* Text color */
+            text-shadow: 0 0 10px rgba(41, 11, 11, 0.8);
+            animation: fadeInOut 5s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+ /* Media Queries */
+ @media screen and (max-width: 768px) {
+            .star {
+                display: none;
+            }
+
+            h1 {
+                top: 40%;
+                font-size: 2em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+ 
+    <div class="star"></div>
+    <div class="star"></div>
+    <h1>Make a Wish</h1>
+
+    <!-- particles.js container --> 
+<div id="particles-js"></div>
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+    particlesJS("particles-js", {
+      "particles": {
+    "number": {
+      "value": 160,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 4,
+        "size_min": 0.3,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.20000000000000004,
+      "direction": "bottom",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 600
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 250,
+        "size": 0,
+        "duration": 2,
+        "opacity": 0,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 400,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+</script>
+</body>
+</html>
